@@ -2218,6 +2218,7 @@ impl<'eng> FnCompiler<'eng> {
         {
             Ok(TerminatorValue::new(config_val, context))
         } else {
+            dbg!(&call_path, &name);
             Err(CompileError::InternalOwned(
                 format!("Unable to resolve variable '{}'.", name.as_str()),
                 Span::dummy(),
