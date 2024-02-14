@@ -2013,10 +2013,7 @@ fn construct_dead_code_warning_from_node(
                 })),
             ..
         } => CompileWarning {
-            span: {
-                dbg!(node);
-                name.span()
-            },
+            span: name.span(),
             warning_content: Warning::DeadFunctionDeclaration,
         },
         ty::TyAstNode {
